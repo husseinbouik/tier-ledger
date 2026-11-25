@@ -1,0 +1,10 @@
+**/bin
+**/obj
+**/*.db
+.git
+.github
+tests
+*.md
+.dockerignore
+Dockerfile
+docker-compose.yml
