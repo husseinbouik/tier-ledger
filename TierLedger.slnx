@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TierLedger.Api/TierLedger.Api.csproj" />
+    <Project Path="src/TierLedger.Application/TierLedger.Application.csproj" />
+    <Project Path="src/TierLedger.Domain/TierLedger.Domain.csproj" />
+    <Project Path="src/TierLedger.Infrastructure/TierLedger.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TierLedger.IntegrationTests/TierLedger.IntegrationTests.csproj" />
+    <Project Path="tests/TierLedger.UnitTests/TierLedger.UnitTests.csproj" />
+  </Folder>
+</Solution>
