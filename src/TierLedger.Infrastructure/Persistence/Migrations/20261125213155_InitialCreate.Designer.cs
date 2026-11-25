@@ -12,7 +12,7 @@ using TierLedger.Infrastructure.Persistence;
 namespace TierLedger.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20261125204756_InitialCreate")]
+    [Migration("20261125213155_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -28,7 +28,6 @@ namespace TierLedger.Infrastructure.Persistence.Migrations
             modelBuilder.Entity("TierLedger.Domain.Invoices.Invoice", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedOnUtc")
@@ -94,7 +93,6 @@ namespace TierLedger.Infrastructure.Persistence.Migrations
             modelBuilder.Entity("TierLedger.Domain.Invoices.InvoiceLine", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
@@ -127,7 +125,6 @@ namespace TierLedger.Infrastructure.Persistence.Migrations
             modelBuilder.Entity("TierLedger.Domain.Invoices.Payment", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("Amount")
@@ -162,7 +159,6 @@ namespace TierLedger.Infrastructure.Persistence.Migrations
             modelBuilder.Entity("TierLedger.Domain.Processes.PaymentProcess", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("AmountPaid")
@@ -210,7 +206,6 @@ namespace TierLedger.Infrastructure.Persistence.Migrations
             modelBuilder.Entity("TierLedger.Domain.ThirdParties.ThirdParty", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedOnUtc")
@@ -257,7 +252,6 @@ namespace TierLedger.Infrastructure.Persistence.Migrations
             modelBuilder.Entity("TierLedger.Infrastructure.Outbox.OutboxMessage", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Content")
